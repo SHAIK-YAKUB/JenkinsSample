@@ -9,13 +9,12 @@ import org.springframework.boot.web.servlet.support.SpringBootServletInitializer
 public class BackendJenkinsApplication extends SpringBootServletInitializer {
 
     @Override
-    protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
-        // Point to your main application class
-        return builder.sources(BackendJenkinsApplication.class);
+    protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
+        return application.sources(BackendJenkinsApplication.class);
     }
 
     public static void main(String[] args) {
         SpringApplication.run(BackendJenkinsApplication.class, args);
-        System.out.println("✅ Project is Running on External Tomcat ...");
     }
 }
+
